@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		648BDCAF1EA4C5F900BEBCF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648BDCAE1EA4C5F900BEBCF7 /* AppDelegate.swift */; };
+		648BDCB11EA4C5F900BEBCF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648BDCB01EA4C5F900BEBCF7 /* ViewController.swift */; };
+		648BDCB41EA4C5F900BEBCF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648BDCB21EA4C5F900BEBCF7 /* Main.storyboard */; };
+		648BDCB61EA4C5F900BEBCF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648BDCB51EA4C5F900BEBCF7 /* Assets.xcassets */; };
+		648BDCB91EA4C5F900BEBCF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648BDCB71EA4C5F900BEBCF7 /* LaunchScreen.storyboard */; };
+		648BDCC21EA4C6CB00BEBCF7 /* UserDefaults+MC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648BDCC11EA4C6CB00BEBCF7 /* UserDefaults+MC.swift */; };
+		648BDCC41EA524D700BEBCF7 /* Dictionary+MC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648BDCC31EA524D700BEBCF7 /* Dictionary+MC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		648BDCAB1EA4C5F900BEBCF7 /* SCMapCatch-Swift_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SCMapCatch-Swift_Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		648BDCAE1EA4C5F900BEBCF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		648BDCB01EA4C5F900BEBCF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		648BDCB31EA4C5F900BEBCF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		648BDCB51EA4C5F900BEBCF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		648BDCB81EA4C5F900BEBCF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		648BDCBA1EA4C5F900BEBCF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		648BDCC11EA4C6CB00BEBCF7 /* UserDefaults+MC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+MC.swift"; sourceTree = "<group>"; };
+		648BDCC31EA524D700BEBCF7 /* Dictionary+MC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+MC.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		648BDCA81EA4C5F900BEBCF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		648BDCA21EA4C5F900BEBCF7 = {
+			isa = PBXGroup;
+			children = (
+				648BDCC01EA4C61B00BEBCF7 /* SCMapCatch-Swift */,
+				648BDCAD1EA4C5F900BEBCF7 /* SCMapCatch-Swift_Demo */,
+				648BDCAC1EA4C5F900BEBCF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		648BDCAC1EA4C5F900BEBCF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				648BDCAB1EA4C5F900BEBCF7 /* SCMapCatch-Swift_Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		648BDCAD1EA4C5F900BEBCF7 /* SCMapCatch-Swift_Demo */ = {
+			isa = PBXGroup;
+			children = (
+				648BDCAE1EA4C5F900BEBCF7 /* AppDelegate.swift */,
+				648BDCB01EA4C5F900BEBCF7 /* ViewController.swift */,
+				648BDCB21EA4C5F900BEBCF7 /* Main.storyboard */,
+				648BDCB51EA4C5F900BEBCF7 /* Assets.xcassets */,
+				648BDCB71EA4C5F900BEBCF7 /* LaunchScreen.storyboard */,
+				648BDCBA1EA4C5F900BEBCF7 /* Info.plist */,
+			);
+			path = "SCMapCatch-Swift_Demo";
+			sourceTree = "<group>";
+		};
+		648BDCC01EA4C61B00BEBCF7 /* SCMapCatch-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				648BDCC11EA4C6CB00BEBCF7 /* UserDefaults+MC.swift */,
+				648BDCC31EA524D700BEBCF7 /* Dictionary+MC.swift */,
+			);
+			name = "SCMapCatch-Swift";
+			path = "../SCMapCatch-Swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		648BDCAA1EA4C5F900BEBCF7 /* SCMapCatch-Swift_Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 648BDCBD1EA4C5F900BEBCF7 /* Build configuration list for PBXNativeTarget "SCMapCatch-Swift_Demo" */;
+			buildPhases = (
+				648BDCA71EA4C5F900BEBCF7 /* Sources */,
+				648BDCA81EA4C5F900BEBCF7 /* Frameworks */,
+				648BDCA91EA4C5F900BEBCF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SCMapCatch-Swift_Demo";
+			productName = "SCMapCatch-Swift_Demo";
+			productReference = 648BDCAB1EA4C5F900BEBCF7 /* SCMapCatch-Swift_Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		648BDCA31EA4C5F900BEBCF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Coder Chan";
+				TargetAttributes = {
+					648BDCAA1EA4C5F900BEBCF7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2CWHS886W3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 648BDCA61EA4C5F900BEBCF7 /* Build configuration list for PBXProject "SCMapCatch-Swift_Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 648BDCA21EA4C5F900BEBCF7;
+			productRefGroup = 648BDCAC1EA4C5F900BEBCF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				648BDCAA1EA4C5F900BEBCF7 /* SCMapCatch-Swift_Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		648BDCA91EA4C5F900BEBCF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648BDCB91EA4C5F900BEBCF7 /* LaunchScreen.storyboard in Resources */,
+				648BDCB61EA4C5F900BEBCF7 /* Assets.xcassets in Resources */,
+				648BDCB41EA4C5F900BEBCF7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		648BDCA71EA4C5F900BEBCF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648BDCC21EA4C6CB00BEBCF7 /* UserDefaults+MC.swift in Sources */,
+				648BDCC41EA524D700BEBCF7 /* Dictionary+MC.swift in Sources */,
+				648BDCB11EA4C5F900BEBCF7 /* ViewController.swift in Sources */,
+				648BDCAF1EA4C5F900BEBCF7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		648BDCB21EA4C5F900BEBCF7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				648BDCB31EA4C5F900BEBCF7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		648BDCB71EA4C5F900BEBCF7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				648BDCB81EA4C5F900BEBCF7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		648BDCBB1EA4C5F900BEBCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		648BDCBC1EA4C5F900BEBCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		648BDCBE1EA4C5F900BEBCF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2CWHS886W3;
+				INFOPLIST_FILE = "SCMapCatch-Swift_Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Chan4iOS.SCMapCatch-Swift-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		648BDCBF1EA4C5F900BEBCF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2CWHS886W3;
+				INFOPLIST_FILE = "SCMapCatch-Swift_Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Chan4iOS.SCMapCatch-Swift-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		648BDCA61EA4C5F900BEBCF7 /* Build configuration list for PBXProject "SCMapCatch-Swift_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				648BDCBB1EA4C5F900BEBCF7 /* Debug */,
+				648BDCBC1EA4C5F900BEBCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		648BDCBD1EA4C5F900BEBCF7 /* Build configuration list for PBXNativeTarget "SCMapCatch-Swift_Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				648BDCBE1EA4C5F900BEBCF7 /* Debug */,
+				648BDCBF1EA4C5F900BEBCF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 648BDCA31EA4C5F900BEBCF7 /* Project object */;
+}
