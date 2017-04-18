@@ -11,16 +11,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        UserDefaults.standard.mc_set(object: 1, forKeys: "a4","a8","a6","a7")
-        UserDefaults.mc_set(object: "1", forKeys: "a4","a8","a6","a7")
-        UserDefaults.mc_set(object: 1, forKeys: "b","b2")
-        let obj = UserDefaults.standard.mc_object(forKeys: ["a4","a8","a6","a7"])
-        print(obj!)
-//        var dic = [String:Any]()
-//        dic = dic.mc_set(value: 1, forkey: "4")
-//        print(dic)
-//        let dic0 = ["1":["1":223],"2":2,"3":3,"4":4,"5":5,"6":6] as [String:Any]!
-//        print(dic0!.mc_object(forKeys: ["1","1"])!)
+        UserDefaults.mc_set(object: "111111", forKeys: "1","2","a6","a7")
+        let obj = UserDefaults.standard.mc_object(forKeys: "1","2","a6","a7")
+        print("catch0 -----> \(obj!)")
+        
+        
+        let dic = ["1":["2":["3":"fdasfads"]]]
+        let catchResult = dic.mc_object(forKeys: "1","2","3")
+        
+        print("catch1 -----> \(catchResult!)")
     }
 
     override func didReceiveMemoryWarning() {

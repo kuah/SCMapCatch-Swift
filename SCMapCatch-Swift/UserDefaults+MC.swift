@@ -10,36 +10,41 @@ import Foundation
 
 extension UserDefaults{
     ///set
-    func mc_set(object mObject:Any?,forKeys keys:Array<String>){
+   func mc_set<T:Hashable>(object mObject:Any?,forKeys keys:Array<T>){
         guard keys.count>0 else {
             return
         }
         guard keys.first != nil else{
             return
         }
+        let firstKey = keys.first as? String//第一个key必须为string userDefault规定
+        guard firstKey != nil else{
+            return
+        }
+        
         if keys.count==1{
-            mc_set(object: mObject, forkey: keys.first!)
+            mc_set(object: mObject, forkey: firstKey!)
         }else{
-            let tree = value(forKey:keys.first!)
-            var mDict = [String : Any]()
+            let tree = value(forKey:firstKey!)
+            var mDict = [T : Any]()
             
             if tree != nil {
-                guard tree is [String:Any] else {
+                guard tree is [T:Any] else {
                     return
                 }
-                mDict = tree as! [String : Any]
+                mDict = tree as! [T : Any]
             }
             var inputKeys = keys
             inputKeys.remove(at: 0)
-            let rootTree = mc_handleTree(tree: mDict, components: inputKeys, obj: mObject)
+            let rootTree = mc_handleTree(tree: mDict, components: inputKeys , obj: mObject)
             guard rootTree != nil else {
                 return
             }
-            set(rootTree!, forKey: keys.first!)
+            set(rootTree!, forKey: firstKey!)
         }
         synchronize();
     }
-    func mc_set(object mObject:Any?,forKeys keys:String...){
+    func mc_set<T:Hashable>(object mObject:Any?,forKeys keys:T...){
         mc_set(object: mObject, forKeys: keys)
     }
     
@@ -52,8 +57,7 @@ extension UserDefaults{
         synchronize();
     }
     
-    fileprivate func mc_handleTree(tree: [String:Any],components:Array<String>,obj:Any?)->Dictionary<String, Any>?{
-        print(components)
+    fileprivate func mc_handleTree<T:Hashable>(tree: [T:Any],components:Array<T>,obj:Any?)->Dictionary<T, Any>?{
         var result = tree
         if components.count==1{//last level
             result = result.mc_set(value: obj, forkey: components.first!)
@@ -61,50 +65,54 @@ extension UserDefaults{
             var nextComponents = components
             nextComponents.remove(at: 0)
             let nextTree = tree[components.first!]
-            if  nextTree != nil && nextTree is [String : Any]{
+            if  nextTree != nil && nextTree is [T : Any]{
                 
-                result[components.first!] = mc_handleTree(tree:nextTree as! [String : Any], components:nextComponents , obj: obj)
+                result[components.first!] = mc_handleTree(tree:nextTree as! [T : Any], components:nextComponents , obj: obj)
             }else{
-                result[components.first!] = mc_handleTree(tree:[String : Any](), components:nextComponents , obj: obj)
+                result[components.first!] = mc_handleTree(tree:[T : Any](), components:nextComponents , obj: obj)
             }
         }
-        print(result)
         return result
     }
     
     class func mc_set(object:Any?,forkey key:String){
         self.standard.mc_set(object: object, forkey: key)
     }
-    class func mc_set(object mObject:Any?,forKeys keys:String...){
+    class func mc_set<T:Hashable>(object mObject:Any?,forKeys keys:T...){
         self.standard.mc_set(object: mObject, forKeys: keys)
     }
-    class func mc_set(object mObject:Any?,forKeys keys:Array<String>){
+    class func mc_set<T:Hashable>(object mObject:Any?,forKeys keys:Array<T>){
         self.standard.mc_set(object: mObject, forKeys: keys)
     }
     
     ///get
-    func mc_object(forKeys keys:String...) -> Any? {
+    func mc_object<T:Hashable>(forKeys keys:T...) -> Any? {
        return mc_object(forKeys: keys)
     }
-    func mc_object(forKeys keys:Array<String>) -> Any? {
+    func mc_object<T:Hashable>(forKeys keys:Array<T>) -> Any? {
         guard keys.count>0 else{
             return nil
         }
-        if keys.count == 1{            return object(forKey: keys.first!)
+        let firstKey = keys.first as? String
+        guard firstKey != nil  else{
+            return nil
+        }
+        if keys.count == 1{
+            return object(forKey: firstKey!)
         }else{
-            let nextLevel = object(forKey: keys.first!)
-            guard nextLevel != nil && nextLevel is Dictionary<String,Any> else{
+            let nextLevel = object(forKey: firstKey!)
+            guard nextLevel != nil && nextLevel is Dictionary<T,Any> else{
                 return nil
             }
             var nextLevelKeys = keys
             nextLevelKeys.remove(at: 0)
-            return (nextLevel as! Dictionary<String,Any>).mc_object(forKeys: nextLevelKeys)
+            return (nextLevel as! Dictionary<T,Any>).mc_object(forKeys: nextLevelKeys)
         }
     }
-    class func mc_object(forKeys keys:String...) -> Any? {
+    class func mc_object<T:Hashable>(forKeys keys:T...) -> Any? {
        return self.standard.mc_object(forKeys: keys)
     }
-    class func mc_object(forKeys keys:Array<String>) -> Any? {
+    class func mc_object<T:Hashable>(forKeys keys:Array<T>) -> Any? {
         return self.standard.mc_object(forKeys: keys)
     }
 }

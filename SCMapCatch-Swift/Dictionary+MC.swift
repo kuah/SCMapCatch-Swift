@@ -25,16 +25,19 @@ extension Dictionary{
         if keys.count == 1{
             return self[keys.first as! Key]
         }else{
-            let nextLevel = self[keys.first as! Key]
-            guard nextLevel != nil && nextLevel is [Key:Value] else{
+            let nextLevel = self[keys.first as! Key] as? [T:Any]
+            guard nextLevel != nil else{
                 return nil
             }
             var nextLevelKeys = keys
             nextLevelKeys.remove(at: 0)
-            return (nextLevel as! [Key:Value]).mc_object(forKeys: nextLevelKeys)
+            
+            return (nextLevel!).mc_object(forKeys: nextLevelKeys)
         }
     }
     func mc_object<T:Hashable>(forKeys keys:T...) -> Any? {
         return mc_object(forKeys:keys)
     }
+    
+    
 }
