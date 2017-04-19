@@ -35,6 +35,10 @@ extension Dictionary{
             return (nextLevel!).mc_object(forKeys: nextLevelKeys)
         }
     }
+    /*get object by path
+     :param:keys path components
+     :return:result
+     */
     func mc_object<T:Hashable>(forKeys keys:T...) -> Any? {
         return mc_object(forKeys:keys)
     }

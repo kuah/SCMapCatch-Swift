@@ -9,7 +9,12 @@
 import Foundation
 
 extension UserDefaults{
-    ///set
+    /*
+     UserDefaults set object by level keys , it will auto choose to create elements on the path if the elements on the path have not been created,or delete the element on the path when the param 'object' is nil
+     :mObject:object to insert
+     :keys:path components
+     :warning:The first obj in keys must be 'Stirng' type ，otherwise it will return nil
+     */
    func mc_set<T:Hashable>(object mObject:Any?,forKeys keys:Array<T>){
         guard keys.count>0 else {
             return
@@ -44,10 +49,20 @@ extension UserDefaults{
         }
         synchronize();
     }
+    /*
+     UserDefaults set object by level keys , it will auto choose to create elements on the path if the elements on the path have not been created,or delete the element on the path when the param 'object' is nil
+     :mObject:object to insert
+     :keys:path components
+     :warning:The first obj in keys must be 'Stirng' type ，otherwise it will return nil
+     */
     func mc_set<T:Hashable>(object mObject:Any?,forKeys keys:T...){
         mc_set(object: mObject, forKeys: keys)
     }
-    
+    /*
+     UserDefaults set object key , it will auto choose to create element when the param 'object' != nil,or delete the element on the path when the param 'object' is nil
+     :mObject:object to insert
+     :key:String
+     */
     func mc_set(object:Any?,forkey key:String){
         if object != nil{
             set(object!, forKey: key)
@@ -56,7 +71,11 @@ extension UserDefaults{
         }
         synchronize();
     }
-    
+    /*Recursive traversal func
+     :param:tree this level tree
+     :param:components the rest of path components
+     :return:hanle result of this level
+     */
     fileprivate func mc_handleTree<T:Hashable>(tree: [T:Any],components:Array<T>,obj:Any?)->Dictionary<T, Any>?{
         var result = tree
         if components.count==1{//last level
@@ -85,10 +104,19 @@ extension UserDefaults{
         self.standard.mc_set(object: mObject, forKeys: keys)
     }
     
-    ///get
+    /*get object by path
+     :param:keys path components
+     :return:result
+     :warning:the first object of keys must be 'String' type , otherwise it will return nil
+     */
     func mc_object<T:Hashable>(forKeys keys:T...) -> Any? {
        return mc_object(forKeys: keys)
     }
+    /*get object by path
+     :param:keys path components
+     :return:result
+     :warning:the first object of keys must be 'String' type , otherwise it will return nil
+     */
     func mc_object<T:Hashable>(forKeys keys:Array<T>) -> Any? {
         guard keys.count>0 else{
             return nil
