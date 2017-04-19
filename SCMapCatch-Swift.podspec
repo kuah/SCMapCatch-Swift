@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'SCMapCatch-Swift'
-  s.version      = '0.1'
+  s.version      = '0.2'
   s.summary      = 'A simplified tool for UserDefaults , Dictionary.'
   s.homepage     = 'https://github.com/Chan4iOS/SCMapCatch-Swift'
   s.author       = "CT4 => 284766710@qq.com"
